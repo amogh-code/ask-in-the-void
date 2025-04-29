@@ -1,11 +1,12 @@
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import ThankYouAnimation from '@/components/ThankYouAnimation';
 import { setupIntersectionObserver } from '@/lib/utils';
+import { Phone, Mail, MessageSquare, Github } from 'lucide-react';
 
 const Message: React.FC = () => {
   const [name, setName] = useState('');
@@ -14,7 +15,7 @@ const Message: React.FC = () => {
   const [showThankYou, setShowThankYou] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
   
-  React.useEffect(() => {
+  useEffect(() => {
     setupIntersectionObserver();
   }, []);
   
@@ -31,7 +32,7 @@ Message:
 ${message}
     `;
     
-    const mailtoUrl = `mailto:your-email@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoUrl = `mailto:amoghstv@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
     // Open email client
     window.open(mailtoUrl);
@@ -59,8 +60,46 @@ ${message}
             </h1>
             <p className="text-lg text-center mb-12 text-muted-foreground animate-on-scroll">
               Have a project in mind or just want to say hi? Fill out the form below 
-              and I'll get back to you as soon as possible.
+              or use one of my contact details.
             </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <div className="space-y-6 animate-on-scroll">
+                <div className="flex items-center gap-3 p-4 rounded-lg bg-card/20 backdrop-blur-sm border border-border hover:border-netflix transition-colors">
+                  <Phone className="h-5 w-5 text-netflix" />
+                  <div>
+                    <p className="font-medium">Phone</p>
+                    <a href="tel:+916362683665" className="text-muted-foreground hover:text-netflix">+91 6362683665</a>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-3 p-4 rounded-lg bg-card/20 backdrop-blur-sm border border-border hover:border-netflix transition-colors">
+                  <Mail className="h-5 w-5 text-netflix" />
+                  <div>
+                    <p className="font-medium">Email</p>
+                    <a href="mailto:amoghstv@gmail.com" className="text-muted-foreground hover:text-netflix">amoghstv@gmail.com</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-6 animate-on-scroll">
+                <div className="flex items-center gap-3 p-4 rounded-lg bg-card/20 backdrop-blur-sm border border-border hover:border-green-500 transition-colors">
+                  <MessageSquare className="h-5 w-5 text-green-500" />
+                  <div>
+                    <p className="font-medium">WhatsApp</p>
+                    <a href="https://wa.link/hhleux" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-green-500">Message me on WhatsApp</a>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-3 p-4 rounded-lg bg-card/20 backdrop-blur-sm border border-border hover:border-gray-400 transition-colors">
+                  <Github className="h-5 w-5" />
+                  <div>
+                    <p className="font-medium">GitHub</p>
+                    <a href="https://github.com/amogh-code" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">@amogh-code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
             
             <form 
               ref={formRef}
@@ -115,9 +154,6 @@ ${message}
             
             <div className="mt-12 text-center text-muted-foreground text-sm animate-on-scroll">
               <p>
-                You can also reach me directly at <a href="mailto:your-email@example.com" className="text-netflix hover:underline">your-email@example.com</a>
-              </p>
-              <p className="mt-2">
                 Based in Bangalore, India
               </p>
             </div>

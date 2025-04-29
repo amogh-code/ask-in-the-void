@@ -1,8 +1,7 @@
-
 import React, { useState, useEffect, useMemo } from 'react';
 import RepoCard from '@/components/RepoCard';
 import { Button } from '@/components/ui/button';
-import { Search, Filter } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { setupIntersectionObserver } from '@/lib/utils';
 
@@ -32,111 +31,89 @@ const Projects: React.FC = () => {
       setError(null);
       
       try {
-        // This is a placeholder. In a real app, you'd fetch from the actual GitHub API with your username
-        // const response = await fetch('https://api.github.com/users/YOUR_USERNAME/repos');
+        // Fetch from GitHub API for amogh-code
+        const response = await fetch('https://api.github.com/users/amogh-code/repos');
         
-        // For demonstration, we'll use mock data
-        await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate API delay
+        if (!response.ok) {
+          throw new Error('Failed to fetch repositories');
+        }
+        
+        let repos = await response.json();
+        
+        // Map to our Repository interface
+        repos = repos.map((repo: any) => ({
+          id: repo.id.toString(),
+          name: repo.name,
+          description: repo.description || 'No description available',
+          language: repo.language || 'Not specified',
+          stargazers_count: repo.stargazers_count,
+          forks_count: repo.forks_count,
+          html_url: repo.html_url,
+          topics: repo.topics || []
+        }));
+        
+        setRepositories(repos);
+        setIsLoading(false);
+      } catch (err) {
+        // If the GitHub API fails, use the mock data as fallback
+        console.error('Error fetching repositories:', err);
         
         const mockRepos: Repository[] = [
           {
             id: '1',
-            name: 'portfolio-website',
-            description: 'My personal portfolio website built with React and Tailwind CSS',
+            name: 'frontend-client-task',
+            description: 'A frontend client task using React and TypeScript',
             language: 'TypeScript',
-            stargazers_count: 12,
-            forks_count: 3,
-            html_url: 'https://github.com',
-            topics: ['react', 'typescript', 'portfolio', 'tailwindcss']
+            stargazers_count: 4,
+            forks_count: 2,
+            html_url: 'https://github.com/amogh-code/frontend-client-task',
+            topics: ['react', 'typescript', 'frontend']
           },
           {
             id: '2',
-            name: 'e-commerce-platform',
-            description: 'A full-stack e-commerce platform with product management, cart functionality, and payment processing',
+            name: 'calculator',
+            description: 'Simple calculator application with HTML, CSS and JavaScript',
             language: 'JavaScript',
-            stargazers_count: 45,
-            forks_count: 8,
-            html_url: 'https://github.com',
-            topics: ['react', 'nodejs', 'mongodb', 'ecommerce']
+            stargazers_count: 3,
+            forks_count: 1,
+            html_url: 'https://github.com/amogh-code/calculator',
+            topics: ['javascript', 'html', 'css', 'calculator']
           },
           {
             id: '3',
-            name: 'chat-application',
-            description: 'Real-time chat application built with Socket.io and Express',
+            name: 'personal-portfolio',
+            description: 'My personal portfolio website showcasing my projects and skills',
             language: 'JavaScript',
-            stargazers_count: 29,
-            forks_count: 6,
-            html_url: 'https://github.com',
-            topics: ['socket.io', 'express', 'react', 'real-time']
+            stargazers_count: 5,
+            forks_count: 0,
+            html_url: 'https://github.com/amogh-code/personal-portfolio',
+            topics: ['portfolio', 'react', 'tailwind']
           },
           {
             id: '4',
-            name: 'machine-learning-projects',
-            description: 'Collection of machine learning models and experiments',
-            language: 'Python',
-            stargazers_count: 18,
-            forks_count: 4,
-            html_url: 'https://github.com',
-            topics: ['machine-learning', 'data-science', 'python', 'tensorflow']
+            name: 'weather-app',
+            description: 'Weather application that uses OpenWeatherMap API',
+            language: 'JavaScript',
+            stargazers_count: 2,
+            forks_count: 1,
+            html_url: 'https://github.com/amogh-code/weather-app',
+            topics: ['javascript', 'api', 'weather']
           },
           {
             id: '5',
-            name: 'inventory-management-system',
-            description: 'Web-based inventory management system for small businesses',
-            language: 'TypeScript',
-            stargazers_count: 23,
-            forks_count: 5,
-            html_url: 'https://github.com',
-            topics: ['angular', 'typescript', 'business', 'inventory']
-          },
-          {
-            id: '6',
-            name: 'mobile-fitness-app',
-            description: 'A fitness tracking mobile application built with React Native',
+            name: 'todo-app',
+            description: 'A simple todo application built with React',
             language: 'JavaScript',
-            stargazers_count: 32,
-            forks_count: 7,
-            html_url: 'https://github.com',
-            topics: ['react-native', 'mobile', 'fitness', 'expo']
-          },
-          {
-            id: '7',
-            name: 'weather-dashboard',
-            description: 'Weather forecast dashboard using OpenWeatherMap API',
-            language: 'JavaScript',
-            stargazers_count: 15,
-            forks_count: 3,
-            html_url: 'https://github.com',
-            topics: ['api', 'weather', 'javascript', 'dashboard']
-          },
-          {
-            id: '8',
-            name: 'personal-blog',
-            description: 'My personal blog built with Gatsby and GraphQL',
-            language: 'JavaScript',
-            stargazers_count: 8,
-            forks_count: 2,
-            html_url: 'https://github.com',
-            topics: ['gatsby', 'blog', 'graphql', 'markdown']
-          },
-          {
-            id: '9',
-            name: 'task-management-app',
-            description: 'Kanban-style task management application',
-            language: 'TypeScript',
-            stargazers_count: 27,
-            forks_count: 6,
-            html_url: 'https://github.com',
-            topics: ['react', 'typescript', 'productivity', 'drag-and-drop']
+            stargazers_count: 1,
+            forks_count: 0,
+            html_url: 'https://github.com/amogh-code/todo-app',
+            topics: ['react', 'frontend', 'todo']
           }
         ];
         
         setRepositories(mockRepos);
+        setError('Using fallback data. Unable to connect to GitHub API.');
         setIsLoading(false);
-      } catch (err) {
-        setError('Failed to fetch repositories');
-        setIsLoading(false);
-        console.error('Error fetching repositories:', err);
       }
     };
     
@@ -182,7 +159,7 @@ const Projects: React.FC = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center animate-on-scroll">My Experiments in Code & Chaos</h1>
           <p className="text-lg text-center mb-12 text-muted-foreground max-w-2xl mx-auto animate-on-scroll">
             Browse through my GitHub repositories to see what I've been working on. 
-            From web applications to machine learning experiments, there's a bit of everything.
+            From web applications to experiments, here's a glimpse into my coding journey.
           </p>
           
           {/* Search and Filter */}
@@ -245,15 +222,9 @@ const Projects: React.FC = () => {
               </div>
             </div>
           ) : error ? (
-            <div className="text-center text-destructive p-8 border border-destructive/20 rounded-lg">
+            <div className="bg-card/20 backdrop-blur-sm rounded-lg p-5 mb-6 text-muted-foreground text-center animate-on-scroll">
               <p>{error}</p>
-              <Button 
-                variant="outline" 
-                className="mt-4" 
-                onClick={() => window.location.reload()}
-              >
-                Try Again
-              </Button>
+              <p className="text-sm mt-2">Showing available repository data.</p>
             </div>
           ) : filteredRepositories.length === 0 ? (
             <div className="text-center text-muted-foreground p-8 border border-border rounded-lg">

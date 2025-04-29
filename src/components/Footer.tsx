@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Instagram, Twitter, Youtube } from 'lucide-react';
+import { Github, Linkedin, Instagram, Twitter, Youtube, Phone, Mail, MessageSquare } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
             <h4 className="font-semibold">Connect With Me</h4>
             <div className="flex space-x-4">
               <a
-                href="https://github.com"
+                href="https://github.com/amogh-code"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-netflix transition-colors hover-float"
@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/amogh-sai-krishnan-1506a8212"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-netflix transition-colors hover-float"
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/amogh.kris/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-netflix transition-colors hover-float"
@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
                 <Twitter className="h-5 w-5" />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/channel/UCtoXVCLToZyREW3V2HICgTw"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-netflix transition-colors hover-float"
@@ -94,10 +94,27 @@ const Footer: React.FC = () => {
               >
                 <Youtube className="h-5 w-5" />
               </a>
+              <a
+                href="https://wa.link/hhleux"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-green-500 transition-colors hover-float"
+                aria-label="WhatsApp"
+              >
+                <MessageSquare className="h-5 w-5" />
+              </a>
             </div>
-            <p className="text-sm text-muted-foreground">
-              Bangalore, India
-            </p>
+            <div className="text-sm text-muted-foreground space-y-1">
+              <p className="flex items-center gap-2">
+                <Phone className="h-4 w-4" /> +91 6362683665
+              </p>
+              <p className="flex items-center gap-2">
+                <Mail className="h-4 w-4" /> amoghstv@gmail.com
+              </p>
+              <p>
+                Bangalore, India
+              </p>
+            </div>
           </div>
         </div>
         
