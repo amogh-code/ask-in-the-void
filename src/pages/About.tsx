@@ -29,16 +29,16 @@ const About: React.FC = () => {
   
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl md:text-5xl font-bold mb-8 text-gradient-red">
+      <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-gradient-red text-center md:text-left">
         The Walking Resume <span className="text-muted-foreground">(With a Pulse)</span>
       </h1>
       
       <ScrollingText text="Entrepreneur • Designer • Creative • Human Disaster™ • Entrepreneur • Designer • Creative • Human Disaster™" />
       
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
-        <div className="lg:col-span-2">
-          <div id="timeline" ref={timelineRef} className="space-y-12 relative">
-            <div className="absolute top-0 bottom-0 left-[15px] w-1 bg-gradient-to-b from-netflix via-purpleask to-yellowask"></div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8 mt-8 md:mt-12">
+        <div className="lg:col-span-2 order-2 lg:order-1">
+          <div id="timeline" ref={timelineRef} className="space-y-8 md:space-y-12 relative">
+            <div className="absolute top-0 bottom-0 left-1/2 -ml-0.5 md:left-[15px] w-1 bg-gradient-to-b from-netflix via-purpleask to-yellowask"></div>
             
             <TimelineItem 
               date="Sept 2023 - Present" 
@@ -77,13 +77,13 @@ const About: React.FC = () => {
           </div>
         </div>
         
-        <div className="space-y-6">
+        <div className="space-y-4 md:space-y-6 order-1 lg:order-2 mb-8 lg:mb-0">
           <CollapsibleCard 
             title="Skills" 
             description="What I can do"
             defaultOpen={true}
           >
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <h4 className="font-bold text-lg mb-2">Entrepreneurial</h4>
                 <ul className="list-disc pl-5 space-y-1">
@@ -141,7 +141,7 @@ const About: React.FC = () => {
             </ul>
           </CollapsibleCard>
           
-          <div className="p-6 card-glass rounded-xl">
+          <div className="p-4 md:p-6 card-glass rounded-xl">
             <h3 className="text-xl font-bold mb-4">Resume</h3>
             <p className="text-muted-foreground mb-4">Download my complete resume with full details of ventures, skills, and experiences.</p>
             <Button onClick={handleResumeDownload} className="w-full">

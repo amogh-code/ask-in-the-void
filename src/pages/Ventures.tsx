@@ -12,16 +12,16 @@ const Ventures: React.FC = () => {
   }, []);
   
   return (
-    <div className="min-h-screen pb-20">
-      <section className="py-20 bg-gradient-to-br from-yellowask/10 via-background to-babypink/10">
+    <div className="min-h-screen pb-10 md:pb-20">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-yellowask/10 via-background to-babypink/10">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center animate-on-scroll">My Entrepreneurial Ventures</h1>
-          <p className="text-lg text-center mb-12 text-muted-foreground max-w-2xl mx-auto animate-on-scroll">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 text-center animate-on-scroll">My Entrepreneurial Ventures</h1>
+          <p className="text-lg text-center mb-8 md:mb-12 text-muted-foreground max-w-2xl mx-auto animate-on-scroll">
             As an entrepreneur, I'm passionate about building businesses that solve real problems. 
             Here are a couple of my ventures that blend creativity with practicality.
           </p>
           
-          <div className="space-y-8 max-w-4xl mx-auto">
+          <div className="space-y-6 md:space-y-8 max-w-4xl mx-auto">
             {/* Gudbud.in */}
             <CollapsibleCard
               title="Gudbud.in"
@@ -31,14 +31,14 @@ const Ventures: React.FC = () => {
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <p className="mb-4">
+                  <p className="mb-4 text-sm md:text-base">
                     Gudbud.in is a student-focused online store specializing in quirky, relatable 
                     apparel designed especially for engineers. We celebrate the chaos and 
                     creativity that come with student life through clever, humor-infused designs 
                     that resonate with young minds.
                   </p>
                   
-                  <p className="mb-4">
+                  <p className="mb-4 text-sm md:text-base">
                     From witty slogans to graphics inspired by engineering and education, our products 
                     offer students a fun way to express themselves. With a focus on premium quality, 
                     cool aesthetics, and budget-friendly pricing, Gudbud is the go-to for students 
@@ -46,7 +46,7 @@ const Ventures: React.FC = () => {
                   </p>
                   
                   <h4 className="font-semibold mt-4 mb-2">Our Services:</h4>
-                  <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                  <ul className="list-disc list-inside space-y-1 text-muted-foreground text-sm md:text-base">
                     <li>Custom T-shirts and Hoodies</li>
                     <li>Event Merchandise</li>
                     <li>College Fest Apparel</li>
@@ -70,7 +70,7 @@ const Ventures: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="space-y-4">
+                <div className="space-y-4 mt-4 md:mt-0">
                   <div className="aspect-video rounded-lg overflow-hidden bg-muted">
                     <img 
                       src="https://source.unsplash.com/random/800x600?tshirt" 
@@ -100,20 +100,20 @@ const Ventures: React.FC = () => {
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <p className="mb-4">
+                  <p className="mb-4 text-sm md:text-base">
                     Annam Authentic is Malleshwaram and Sadashivnagar's largest catering service. 
                     We specialize in pure vegetarian authentic Brahmin style food that honors 
                     traditional recipes while delivering exceptional flavors.
                   </p>
                   
-                  <p className="mb-4">
+                  <p className="mb-4 text-sm md:text-base">
                     As the Chief Executive Officer, I personally oversee the marketing, delivery, 
                     cooking, and business management aspects, ensuring that every meal exceeds our 
                     customers' expectations.
                   </p>
                   
                   <h4 className="font-semibold mt-4 mb-2">What Makes Us Special:</h4>
-                  <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                  <ul className="list-disc list-inside space-y-1 text-muted-foreground text-sm md:text-base">
                     <li>100% Vegetarian. 200% Flavor.</li>
                     <li>Daily rotating menu of authentic dishes</li>
                     <li>Premium buffet experience</li>
@@ -122,13 +122,13 @@ const Ventures: React.FC = () => {
                   </ul>
                   
                   <div className="mt-6 space-y-4">
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <MapPin className="h-4 w-4 text-netflix" />
-                      <span>123 Malleshwaram Main Road, Bangalore, India</span>
+                    <div className="flex items-center gap-2 text-muted-foreground text-sm md:text-base">
+                      <MapPin className="h-4 w-4 text-netflix flex-shrink-0" />
+                      <span className="break-words">123 Malleshwaram Main Road, Bangalore, India</span>
                     </div>
                     
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <Phone className="h-4 w-4 text-netflix" />
+                    <div className="flex items-center gap-2 text-muted-foreground text-sm md:text-base">
+                      <Phone className="h-4 w-4 text-netflix flex-shrink-0" />
                       <span>+91 6362683665</span>
                     </div>
                     
@@ -142,15 +142,15 @@ const Ventures: React.FC = () => {
                       
                       <Button variant="outline" asChild>
                         <Link to="/message" className="gap-2">
-                          Inquire About Catering
+                          Inquire
                         </Link>
                       </Button>
                     </div>
                   </div>
                 </div>
                 
-                <div className="space-y-4">
-                  <div className="rounded-lg overflow-hidden bg-muted h-64">
+                <div className="space-y-4 mt-4 md:mt-0">
+                  <div className="rounded-lg overflow-hidden bg-muted h-48 md:h-64">
                     <img 
                       src="https://source.unsplash.com/random/800x600?indian+food" 
                       alt="Annam Authentic food" 
@@ -159,7 +159,7 @@ const Ventures: React.FC = () => {
                     />
                   </div>
                   
-                  <div className="rounded-lg overflow-hidden bg-muted h-64">
+                  <div className="rounded-lg overflow-hidden bg-muted h-48 md:h-64">
                     {/* This would be a map in a real implementation */}
                     <iframe
                       title="Annam Authentic Location"
@@ -179,10 +179,10 @@ const Ventures: React.FC = () => {
       </section>
       
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-purpleask/20 to-netflix/20">
+      <section className="py-12 md:py-16 bg-gradient-to-r from-purpleask/20 to-netflix/20">
         <div className="container mx-auto px-4 text-center max-w-2xl">
-          <h2 className="text-3xl font-bold mb-6 animate-on-scroll">Interested in Collaborating?</h2>
-          <p className="text-lg mb-8 text-muted-foreground animate-on-scroll">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 animate-on-scroll">Interested in Collaborating?</h2>
+          <p className="text-base md:text-lg mb-6 md:mb-8 text-muted-foreground animate-on-scroll">
             If you're interested in working together or have questions about my ventures,
             I'd love to hear from you. Let's create something amazing together!
           </p>
