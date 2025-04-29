@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Download } from 'lucide-react';
+import { Download, ChessKnight, Code, MapPin, Book } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import SocialButtons from '@/components/SocialButtons';
 import ScrollingText from '@/components/ScrollingText';
@@ -60,7 +60,7 @@ const Home: React.FC = () => {
       </section>
       
       {/* Scrolling Text */}
-      <ScrollingText text="Entrepreneur | Designer | Creative | Human Disaster™ | Entrepreneur | Designer | Creative | Human Disaster™" />
+      <ScrollingText text="Entrepreneur | Designer | Creative | Human Disaster™ | Chess Enthusiast | Psychology Appreciator" />
       
       {/* Bio Section */}
       <section className="py-20 bg-gradient-to-br from-muted/20 to-background">
@@ -78,6 +78,35 @@ const Home: React.FC = () => {
                 quirky and relatable designs. I'm also the CEO of Annam Authentic, Malleshwaram and 
                 Sadashivnagar's largest vegetarian catering service.
               </p>
+              
+              {/* Interests Icons */}
+              <div className="flex flex-wrap gap-6 my-8">
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-full bg-muted/20 flex items-center justify-center mb-2">
+                    <ChessKnight className="h-6 w-6 text-netflix" />
+                  </div>
+                  <span className="text-sm text-muted-foreground">Chess</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-full bg-muted/20 flex items-center justify-center mb-2">
+                    <Code className="h-6 w-6 text-netflix" />
+                  </div>
+                  <span className="text-sm text-muted-foreground">Coding</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-full bg-muted/20 flex items-center justify-center mb-2">
+                    <MapPin className="h-6 w-6 text-netflix" />
+                  </div>
+                  <span className="text-sm text-muted-foreground">Travel</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-full bg-muted/20 flex items-center justify-center mb-2">
+                    <Book className="h-6 w-6 text-netflix" />
+                  </div>
+                  <span className="text-sm text-muted-foreground">Psychology</span>
+                </div>
+              </div>
+              
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <Button asChild variant="outline" className="gap-2">
                   <a href="/resume.pdf" download>

@@ -14,6 +14,7 @@ import Message from "./pages/Message";
 import Ventures from "./pages/Ventures";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+import PhilosophicalQuotes from "./components/PhilosophicalQuotes";
 import { setupCursorTrail, setupScrollProgressBar } from './lib/utils';
 
 const queryClient = new QueryClient();
@@ -65,6 +66,9 @@ const App = () => {
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </main>
+              
+              {/* Philosophical quotes slider just before footer */}
+              <PhilosophicalQuotes />
               
               <Footer />
             </div>
