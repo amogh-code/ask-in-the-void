@@ -150,20 +150,23 @@
 
 /* Animated card flip effect */
 .card-flip {
-  @apply perspective-1000 w-full h-full;
+  perspective: 1000px;
+  @apply w-full h-full;
 }
 
 .card-flip-inner {
-  @apply relative w-full h-full transition-transform duration-500 transform-style-preserve-3d;
+  @apply relative w-full h-full transition-transform duration-500;
+  transform-style: preserve-3d;
 }
 
 .card-flip:hover .card-flip-inner {
-  @apply rotate-y-180;
+  transform: rotateY(180deg);
 }
 
 .card-flip-front,
 .card-flip-back {
-  @apply absolute w-full h-full backface-hidden;
+  @apply absolute w-full h-full;
+  backface-visibility: hidden;
 }
 
 .card-flip-front {
@@ -171,7 +174,7 @@
 }
 
 .card-flip-back {
-  @apply rotate-y-180;
+  transform: rotateY(180deg);
 }
 
 /* Button Hover Effect */
