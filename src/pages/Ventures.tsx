@@ -6,7 +6,7 @@ import CollapsibleCard from '@/components/CollapsibleCard';
 import { setupIntersectionObserver } from '@/lib/utils';
 import { Link } from 'react-router-dom';
 
-const Businesses: React.FC = () => {
+const Ventures: React.FC = () => {
   useEffect(() => {
     setupIntersectionObserver();
   }, []);
@@ -15,10 +15,10 @@ const Businesses: React.FC = () => {
     <div className="min-h-screen pb-20">
       <section className="py-20 bg-gradient-to-br from-yellowask/10 via-background to-babypink/10">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center animate-on-scroll">My Business Ventures</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center animate-on-scroll">My Entrepreneurial Ventures</h1>
           <p className="text-lg text-center mb-12 text-muted-foreground max-w-2xl mx-auto animate-on-scroll">
-            Beyond coding and design, I'm passionate about building businesses that solve real problems. 
-            Here are a couple of my entrepreneurial ventures.
+            As an entrepreneur, I'm passionate about building businesses that solve real problems. 
+            Here are a couple of my ventures that blend creativity with practicality.
           </p>
           
           <div className="space-y-8 max-w-4xl mx-auto">
@@ -32,9 +32,17 @@ const Businesses: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <p className="mb-4">
-                    At Gudbud.in, we create custom apparel for events, college fests, and anyone looking to 
-                    stand out with unique, high-quality clothing. Our designs range from quirky to professional,
-                    all delivered with exceptional quality and attention to detail.
+                    Gudbud.in is a student-focused online store specializing in quirky, relatable 
+                    apparel designed especially for engineers. We celebrate the chaos and 
+                    creativity that come with student life through clever, humor-infused designs 
+                    that resonate with young minds.
+                  </p>
+                  
+                  <p className="mb-4">
+                    From witty slogans to graphics inspired by engineering and education, our products 
+                    offer students a fun way to express themselves. With a focus on premium quality, 
+                    cool aesthetics, and budget-friendly pricing, Gudbud is the go-to for students 
+                    looking to wear their personality!
                   </p>
                   
                   <h4 className="font-semibold mt-4 mb-2">Our Services:</h4>
@@ -93,9 +101,15 @@ const Businesses: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <p className="mb-4">
-                    Annam Authentic brings the rich flavors of traditional Brahmin cuisine to Malleshwaram. 
-                    Our restaurant offers a unique buffet experience featuring carefully prepared vegetarian 
-                    dishes that honor authentic recipes passed down through generations.
+                    Annam Authentic is Malleshwaram and Sadashivnagar's largest catering service. 
+                    We specialize in pure vegetarian authentic Brahmin style food that honors 
+                    traditional recipes while delivering exceptional flavors.
+                  </p>
+                  
+                  <p className="mb-4">
+                    As the Chief Executive Officer, I personally oversee the marketing, delivery, 
+                    cooking, and business management aspects, ensuring that every meal exceeds our 
+                    customers' expectations.
                   </p>
                   
                   <h4 className="font-semibold mt-4 mb-2">What Makes Us Special:</h4>
@@ -115,7 +129,7 @@ const Businesses: React.FC = () => {
                     
                     <div className="flex items-center gap-2 text-muted-foreground">
                       <Phone className="h-4 w-4 text-netflix" />
-                      <span>+91 98765 43210</span>
+                      <span>+91 6362683665</span>
                     </div>
                     
                     <div className="flex flex-wrap gap-4 mt-2">
@@ -169,7 +183,7 @@ const Businesses: React.FC = () => {
         <div className="container mx-auto px-4 text-center max-w-2xl">
           <h2 className="text-3xl font-bold mb-6 animate-on-scroll">Interested in Collaborating?</h2>
           <p className="text-lg mb-8 text-muted-foreground animate-on-scroll">
-            If you're interested in working together or have questions about my businesses,
+            If you're interested in working together or have questions about my ventures,
             I'd love to hear from you. Let's create something amazing together!
           </p>
           <Button asChild size="lg" className="animate-on-scroll">
@@ -181,4 +195,4 @@ const Businesses: React.FC = () => {
   );
 };
 
-export default Businesses;
+export default Ventures;

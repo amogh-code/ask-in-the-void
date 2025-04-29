@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-gradient-red">ASK</h3>
             <p className="text-muted-foreground max-w-xs">
-              Entrepreneur, Designer, Developer, and self-proclaimed Human Disaster™ based in Bangalore, India.
+              Entrepreneur and tech enthusiast based in Bangalore, India. Passionate about blending creativity with technology to create impactful experiences.
             </p>
           </div>
           
@@ -24,18 +24,13 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/projects" className="text-muted-foreground hover:text-netflix transition-colors button-hover">
-                  Projects
-                </Link>
-              </li>
-              <li>
                 <Link to="/message" className="text-muted-foreground hover:text-netflix transition-colors button-hover">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link to="/businesses" className="text-muted-foreground hover:text-netflix transition-colors button-hover">
-                  Businesses
+                <Link to="/ventures" className="text-muted-foreground hover:text-netflix transition-colors button-hover">
+                  Ventures
                 </Link>
               </li>
               <li>

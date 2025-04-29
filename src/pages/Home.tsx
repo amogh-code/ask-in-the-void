@@ -37,7 +37,7 @@ const Home: React.FC = () => {
             <AnimatedLogo />
             
             <h2 className="mt-4 text-xl md:text-2xl font-medium max-w-2xl text-foreground/80">
-              Turning coffee into code and chaos since 1999
+              Crafting experiences that inspire and engage
             </h2>
             
             <div className="mt-8">
@@ -46,7 +46,7 @@ const Home: React.FC = () => {
             
             <div className="mt-12">
               <Button asChild variant="default" className="bg-netflix hover:bg-netflix/80 text-white">
-                <Link to="/projects">Explore My Projects</Link>
+                <Link to="/ventures">Discover My Ventures</Link>
               </Button>
             </div>
           </div>
@@ -60,7 +60,7 @@ const Home: React.FC = () => {
       </section>
       
       {/* Scrolling Text */}
-      <ScrollingText text="Entrepreneur | Designer | Developer | Human Disaster™ | Entrepreneur | Designer | Developer | Human Disaster™" />
+      <ScrollingText text="Entrepreneur | Designer | Creative | Human Disaster™ | Entrepreneur | Designer | Creative | Human Disaster™" />
       
       {/* Bio Section */}
       <section className="py-20 bg-gradient-to-br from-muted/20 to-background">
@@ -69,14 +69,14 @@ const Home: React.FC = () => {
             <div className="animate-on-scroll">
               <h2 className="text-3xl font-bold mb-6 text-gradient-purple">About Me</h2>
               <p className="text-lg mb-6">
-                Hello! I'm <span className="font-bold text-netflix">AMOGH Sai KRISHNAN</span> (ASK), an entrepreneur, 
-                designer, and developer based in Bangalore, India. I love creating unique digital 
-                experiences and solving complex problems with creative solutions.
+                Hello! I'm <span className="font-bold text-netflix">AMOGH Sai KRISHNAN</span> (ASK), an entrepreneur and 
+                tech enthusiast based in Bangalore, India. I'm passionate about blending creativity 
+                with technology to create impactful experiences.
               </p>
               <p className="text-lg mb-6">
-                With a passion for coding and design, I've worked on a variety of projects from 
-                web applications to e-commerce platforms. When I'm not in front of my computer, 
-                you can find me exploring new technologies or planning my next startup venture.
+                Currently, I'm building Gudbud, a T-shirt brand that caters to engineering students with 
+                quirky and relatable designs. I'm also the CEO of Annam Authentic, Malleshwaram and 
+                Sadashivnagar's largest vegetarian catering service.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <Button asChild variant="outline" className="gap-2">
@@ -103,12 +103,12 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 text-gradient-red">Let's Create Something Amazing</h2>
           <p className="text-lg mb-8 max-w-2xl mx-auto">
-            Whether you're looking for a collaboration, have a project idea, or just want to say hi, 
+            Whether you're looking for a collaboration, have a business idea, or just want to say hi, 
             I'm always open to new opportunities and connections.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild variant="default" className="gap-2">
-              <Link to="/projects">See My Work</Link>
+              <Link to="/ventures">View My Ventures</Link>
             </Button>
             <Button asChild variant="outline" className="gap-2">
               <Link to="/message">Contact Me</Link>

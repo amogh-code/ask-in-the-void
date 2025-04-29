@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Message from "./pages/Message";
-import Businesses from "./pages/Businesses";
+import Ventures from "./pages/Ventures";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import { setupCursorTrail, setupScrollProgressBar } from './lib/utils';
@@ -60,7 +60,7 @@ const App = () => {
                   <Route path="/" element={<Home />} />
                   <Route path="/projects" element={<Projects />} />
                   <Route path="/message" element={<Message />} />
-                  <Route path="/businesses" element={<Businesses />} />
+                  <Route path="/ventures" element={<Ventures />} />
                   <Route path="/about" element={<About />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>

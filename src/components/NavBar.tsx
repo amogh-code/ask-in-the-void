@@ -29,9 +29,8 @@ const NavBar: React.FC<NavBarProps> = ({ toggleTheme, isDarkMode }) => {
   
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Projects', path: '/projects' },
     { name: 'Message Me', path: '/message' },
-    { name: 'Businesses', path: '/businesses' },
+    { name: 'Ventures', path: '/ventures' },
     { name: 'About', path: '/about' },
   ];
   

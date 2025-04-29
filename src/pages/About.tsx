@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { getElementOffsetTop, scrollToElement } from '@/lib/domUtils';
 import TimelineItem from '@/components/TimelineItem';
@@ -32,7 +33,7 @@ const About: React.FC = () => {
         The Walking Resume <span className="text-muted-foreground">(With a Pulse)</span>
       </h1>
       
-      <ScrollingText text="Designer • Developer • Entrepreneur • Human Disaster™ • Designer • Developer • Entrepreneur • Human Disaster™" />
+      <ScrollingText text="Entrepreneur • Designer • Creative • Human Disaster™ • Entrepreneur • Designer • Creative • Human Disaster™" />
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
         <div className="lg:col-span-2">
@@ -40,31 +41,38 @@ const About: React.FC = () => {
             <div className="absolute top-0 bottom-0 left-[15px] w-1 bg-gradient-to-b from-netflix via-purpleask to-yellowask"></div>
             
             <TimelineItem 
-              date="2023 - Present" 
-              title="Senior Developer" 
-              organization="Amazing Tech Co." 
-              description="Leading development of scalable applications using React, TypeScript, and Node.js. Mentored junior developers and improved team performance by 40%."
+              date="Sept 2023 - Present" 
+              title="Gudbud.in" 
+              organization="Founder" 
+              description="Founded a student-focused online store specializing in quirky, relatable apparel for engineers. Launched and managed all aspects of the business from design to delivery."
             />
             
             <TimelineItem 
-              date="2020 - 2023" 
-              title="Full Stack Developer" 
-              organization="Innovative Solutions Inc." 
-              description="Developed and maintained e-commerce platforms, implemented CI/CD pipelines, and reduced load times by 60%."
+              date="Nov 2023 - Present" 
+              title="Annam Authentic" 
+              organization="Chief Executive Officer" 
+              description="Leading Malleshwaram and Sadashivnagar's largest vegetarian catering service specializing in authentic Brahmin cuisine. Managing all aspects including marketing, delivery, cooking, and business operations."
             />
             
             <TimelineItem 
-              date="2019 - 2020" 
-              title="Web Developer Intern" 
-              organization="StartUp Growth" 
-              description="Assisted in frontend development using React, conducted user testing, and created documentation for internal tools."
+              date="2021 - Oct 2024" 
+              title="Freelance Copywriter" 
+              organization="Self-employed" 
+              description="Created compelling content for various clients, crafting narratives that engage and convert audiences."
             />
             
             <TimelineItem 
-              date="2015 - 2019" 
-              title="Computer Science Degree" 
-              organization="Tech University" 
-              description="Graduated with honors. Specialized in Web Technologies and Artificial Intelligence."
+              date="2022 - 2024" 
+              title="Social Media Designer" 
+              organization="Freelance" 
+              description="Designed numerous posters and posts for various social media accounts, developing a keen eye for visual storytelling."
+            />
+            
+            <TimelineItem 
+              date="June 2023 - Present" 
+              title="Student" 
+              organization="SRI SRI RAVISHANKAR VIDYAMANDIR" 
+              description="Pursuing Pre-University education with a focus on Psychology."
             />
           </div>
         </div>
@@ -77,58 +85,65 @@ const About: React.FC = () => {
           >
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <h4 className="font-bold text-lg mb-2">Technical</h4>
+                <h4 className="font-bold text-lg mb-2">Entrepreneurial</h4>
                 <ul className="list-disc pl-5 space-y-1">
-                  <li>JavaScript/TypeScript</li>
-                  <li>React & Next.js</li>
-                  <li>Node.js & Express</li>
-                  <li>Python & Django</li>
-                  <li>SQL & NoSQL</li>
+                  <li>Business Development</li>
+                  <li>Brand Building</li>
+                  <li>Service Delivery</li>
+                  <li>Team Leadership</li>
+                  <li>Strategic Planning</li>
                 </ul>
               </div>
               
               <div>
-                <h4 className="font-bold text-lg mb-2">Soft Skills</h4>
+                <h4 className="font-bold text-lg mb-2">Creative</h4>
                 <ul className="list-disc pl-5 space-y-1">
-                  <li>Project Management</li>
-                  <li>Team Leadership</li>
-                  <li>Communication</li>
-                  <li>Problem Solving</li>
-                  <li>User Experience Design</li>
+                  <li>Copywriting</li>
+                  <li>Social Media Marketing</li>
+                  <li>Design & Poster Making</li>
+                  <li>Content Creation</li>
+                  <li>Prompt Engineering</li>
                 </ul>
               </div>
             </div>
           </CollapsibleCard>
           
           <CollapsibleCard 
-            title="Fun Facts" 
-            description="The human side of me"
+            title="Certifications" 
+            description="My professional qualifications"
           >
             <ul className="list-disc pl-5 space-y-2">
-              <li>I've visited 15 countries and counting</li>
-              <li>I can solve a Rubik's cube in under 2 minutes</li>
-              <li>I collect vintage programming books</li>
-              <li>I make artisanal coffee as a hobby</li>
-              <li>I once debugged code in my sleep (true story)</li>
+              <li>Prompt Design in Vertex AI (Google Cloud)</li>
+              <li>Introduction to Generative AI (Google Cloud)</li>
             </ul>
           </CollapsibleCard>
           
           <CollapsibleCard 
-            title="Goals" 
-            description="Where I'm headed"
+            title="Interests" 
+            description="The human side of me"
           >
             <ul className="list-disc pl-5 space-y-2">
-              <li>Contribute to open source AI projects</li>
-              <li>Launch a tech education platform</li>
-              <li>Speak at international developer conferences</li>
-              <li>Write a book on modern web development</li>
-              <li>Mentor 100+ junior developers</li>
+              <li>Chess enthusiast - I love the strategic depth and mental challenge</li>
+              <li>Vegetarian cooking - Perfecting authentic recipes</li>
+              <li>Problem-solving through creative technological solutions</li>
+              <li>Building meaningful connections and communities</li>
+              <li>Crafting compelling narratives through various mediums</li>
+            </ul>
+          </CollapsibleCard>
+          
+          <CollapsibleCard 
+            title="Education" 
+            description="Academic background"
+          >
+            <ul className="list-disc pl-5 space-y-2">
+              <li>SRI SRI RAVISHANKAR VIDYAMANDIR - Pre University College, Psychology (June 2023 - March 2025)</li>
+              <li>BP Indian Public School - High School Diploma, General Studies (2010 - 2021)</li>
             </ul>
           </CollapsibleCard>
           
           <div className="p-6 card-glass rounded-xl">
             <h3 className="text-xl font-bold mb-4">Resume</h3>
-            <p className="text-muted-foreground mb-4">Download my complete resume with full details of projects, skills, and experiences.</p>
+            <p className="text-muted-foreground mb-4">Download my complete resume with full details of ventures, skills, and experiences.</p>
             <Button onClick={handleResumeDownload} className="w-full">
               <FileDown className="mr-2 h-4 w-4" /> Download PDF Resume
             </Button>
