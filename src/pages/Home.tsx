@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Download, ChessKnight, Code, MapPin, Book } from 'lucide-react';
+import { Brain, Code, MapPin, Book, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import SocialButtons from '@/components/SocialButtons';
 import ScrollingText from '@/components/ScrollingText';
@@ -10,11 +10,11 @@ import AnimatedLogo from '@/components/AnimatedLogo';
 import { setupIntersectionObserver } from '@/lib/utils';
 
 const Home: React.FC = () => {
-  // Sample photos for the carousel - replace with actual photos
+  // Limited to just 3 photos for the carousel - replace with actual photos
   const photos = [
-    'https://source.unsplash.com/random/400x600?person=1',
-    'https://source.unsplash.com/random/400x600?tech=1',
-    'https://source.unsplash.com/random/400x600?design=1',
+    'https://source.unsplash.com/random/400x600?chess=1',
+    'https://source.unsplash.com/random/400x600?coding=1',
+    'https://source.unsplash.com/random/400x600?travel=1',
   ];
   
   useEffect(() => {
@@ -83,7 +83,7 @@ const Home: React.FC = () => {
               <div className="flex flex-wrap gap-6 my-8">
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 rounded-full bg-muted/20 flex items-center justify-center mb-2">
-                    <ChessKnight className="h-6 w-6 text-netflix" />
+                    <Brain className="h-6 w-6 text-netflix" />
                   </div>
                   <span className="text-sm text-muted-foreground">Chess</span>
                 </div>
@@ -95,25 +95,19 @@ const Home: React.FC = () => {
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 rounded-full bg-muted/20 flex items-center justify-center mb-2">
-                    <MapPin className="h-6 w-6 text-netflix" />
+                    <Globe className="h-6 w-6 text-netflix" />
                   </div>
                   <span className="text-sm text-muted-foreground">Travel</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 rounded-full bg-muted/20 flex items-center justify-center mb-2">
-                    <Book className="h-6 w-6 text-netflix" />
+                    <Brain className="h-6 w-6 text-netflix" />
                   </div>
                   <span className="text-sm text-muted-foreground">Psychology</span>
                 </div>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                <Button asChild variant="outline" className="gap-2">
-                  <a href="/resume.pdf" download>
-                    <Download className="h-4 w-4" />
-                    Download Resume
-                  </a>
-                </Button>
                 <Button asChild>
                   <Link to="/message">Get In Touch</Link>
                 </Button>
@@ -145,6 +139,9 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+      
+      {/* Philosophical Quotes */}
+      <PhilosophicalQuotes />
     </div>
   );
 };

@@ -3,8 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { getElementOffsetTop, scrollToElement } from '@/lib/domUtils';
 import TimelineItem from '@/components/TimelineItem';
 import CollapsibleCard from '@/components/CollapsibleCard';
-import { Button } from '@/components/ui/button';
-import { FileDown, Book, Code, MapPin, ChessKnight } from 'lucide-react';
+import { Brain, Book, Code, MapPin, Globe } from 'lucide-react';
 import ScrollingText from '@/components/ScrollingText';
 import PhilosophicalQuotes from '@/components/PhilosophicalQuotes';
 
@@ -22,11 +21,6 @@ const About: React.FC = () => {
     
     // ... any other effects
   }, []);
-  
-  const handleResumeDownload = () => {
-    // In a real app, link to an actual resume file
-    alert('Resume download functionality would be implemented here!');
-  };
   
   return (
     <div className="container mx-auto px-4 py-8">
@@ -106,7 +100,7 @@ const About: React.FC = () => {
               
               <div>
                 <h4 className="font-bold text-lg mb-2 flex items-center">
-                  <ChessKnight className="h-4 w-4 mr-2 text-netflix" />
+                  <Globe className="h-4 w-4 mr-2 text-netflix" />
                   Creative
                 </h4>
                 <ul className="list-disc pl-5 space-y-1">
@@ -142,7 +136,7 @@ const About: React.FC = () => {
           >
             <ul className="list-disc pl-5 space-y-2">
               <li className="flex items-start">
-                <ChessKnight className="h-4 w-4 mr-2 mt-1 text-netflix flex-shrink-0" />
+                <Brain className="h-4 w-4 mr-2 mt-1 text-netflix flex-shrink-0" />
                 <span>Chess enthusiast - I love the strategic depth and mental challenge</span>
               </li>
               <li className="flex items-start">
@@ -154,11 +148,11 @@ const About: React.FC = () => {
                 <span>Problem-solving through creative technological solutions</span>
               </li>
               <li className="flex items-start">
-                <MapPin className="h-4 w-4 mr-2 mt-1 text-netflix flex-shrink-0" />
+                <Globe className="h-4 w-4 mr-2 mt-1 text-netflix flex-shrink-0" />
                 <span>Exploring new places and cultures through travel</span>
               </li>
               <li className="flex items-start">
-                <Book className="h-4 w-4 mr-2 mt-1 text-netflix flex-shrink-0" />
+                <Brain className="h-4 w-4 mr-2 mt-1 text-netflix flex-shrink-0" />
                 <span>Delving into psychological concepts and philosophical ideas</span>
               </li>
             </ul>
@@ -179,16 +173,6 @@ const About: React.FC = () => {
               </li>
             </ul>
           </CollapsibleCard>
-          
-          <div className="p-6 card-glass rounded-xl transform transition-all duration-300 hover:scale-[1.01] shadow-lg hover:shadow-xl">
-            <h3 className="text-xl font-bold mb-4 flex items-center">
-              <FileDown className="h-5 w-5 mr-2 text-netflix" /> Resume
-            </h3>
-            <p className="text-muted-foreground mb-4">Download my complete resume with full details of ventures, skills, and experiences.</p>
-            <Button onClick={handleResumeDownload} className="w-full">
-              <FileDown className="mr-2 h-4 w-4" /> Download PDF Resume
-            </Button>
-          </div>
         </div>
       </div>
 
