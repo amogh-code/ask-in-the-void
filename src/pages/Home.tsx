@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Brain, Code, MapPin, Book, Globe } from 'lucide-react';
@@ -7,6 +6,7 @@ import SocialButtons from '@/components/SocialButtons';
 import ScrollingText from '@/components/ScrollingText';
 import PhotoCarousel from '@/components/PhotoCarousel';
 import AnimatedLogo from '@/components/AnimatedLogo';
+import PhilosophicalQuotes from '@/components/PhilosophicalQuotes';
 import { setupIntersectionObserver } from '@/lib/utils';
 
 const Home: React.FC = () => {
